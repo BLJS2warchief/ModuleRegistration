@@ -14,14 +14,14 @@ function verify(email, name){
 }
 
 function sendEmail(email){
-    alert("hai");
+    alert("Email belong to university domain");
     xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){
             body.html == this.responseText;
         }
     };
-    alert("hsi");
+    alert("sending HTTP Request");
     xmlHttp.open("GET", "localhost:8000?email="+email);
     xmlHttp.send();
 }
